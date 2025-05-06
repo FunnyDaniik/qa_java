@@ -10,13 +10,13 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class) // Указываем, что тесты будут запускаться с использованием Parameterized runner'а
-public class FelineTestParameterized { // Объявляем класс FelineTestParameterized для тестирования класса Feline
+public class FelineParameterizedTest { // Объявляем класс FelineTestParameterized для тестирования класса Feline
 
     private final Feline feline = new Feline(); // Создаем экземпляр класса Feline, который будем тестировать
     private final int kittensCount; // Объявляем переменную для хранения количества котят, передаваемого в метод getKittens(int kittensCount)
     private final int expectedKittens; // Объявляем переменную для хранения ожидаемого количества котят
 
-    public FelineTestParameterized(int kittensCount, int expectedKittens) { // Создаем конструктор для класса FelineTestParameterized, принимающий количество котят и ожидаемое количество котят
+    public FelineParameterizedTest(int kittensCount, int expectedKittens) { // Создаем конструктор для класса FelineTestParameterized, принимающий количество котят и ожидаемое количество котят
         this.kittensCount = kittensCount; // Инициализируем переменную kittensCount
         this.expectedKittens = expectedKittens; // Инициализируем переменную expectedKittens
     }

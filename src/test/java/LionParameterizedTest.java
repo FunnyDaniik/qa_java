@@ -14,13 +14,13 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 @RunWith(Parameterized.class)
-public class LionTestParameterized {
+public class LionParameterizedTest {
 
     private Predator predatorMock;
     private final String sex;
     private final boolean expectedMane;
 
-    public LionTestParameterized(String sex, boolean expectedMane) {
+    public LionParameterizedTest(String sex, boolean expectedMane) {
         this.sex = sex;
         this.expectedMane = expectedMane;
     }

@@ -2,20 +2,31 @@ package com.example;
 
 import java.util.List;
 
-public class Animal {
+public class Animal { // Объявляем класс Animal
+    /**
+     * Возвращает список еды для заданного вида животного.
+     */
+    public List<String> getFood(String animalKind) throws Exception { // Объявляем публичный метод getFood, возвращающий List<String> и принимающий String animalKind
 
-    public List<String> getFood(String animalKind) throws Exception {
-        if ("Травоядное".equals(animalKind)) {
-            return List.of("Трава", "Различные растения");
-        } else if ("Хищник".equals(animalKind)) {
-            return List.of("Животные", "Птицы", "Рыба");
-        } else {
-            throw new Exception("Неизвестный вид животного, используйте значение Травоядное или Хищник");
+        // animalKind - Вид животного ("Травоядное" или "Хищник").
+        // return - Список строк с названиями еды.
+        // throws Exception - если вид животного не известен.
+
+        if ("Травоядное".equals(animalKind)) { // Проверяем, является ли animalKind "Травоядное"
+            return List.of("Трава", "Различные растения"); // Возвращаем список еды для травоядных
+        } else if ("Хищник".equals(animalKind)) { // Проверяем, является ли animalKind "Хищник"
+            return List.of("Животные", "Птицы", "Рыба"); // Возвращаем список еды для хищников
+        } else { // Если animalKind не является ни "Травоядное", ни "Хищник"
+            throw new Exception("Неизвестный вид животного, используйте значение Травоядное или Хищник"); // Выбрасываем исключение
         }
     }
 
-    public String getFamily() {
-        return "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
+    /**
+     * Возвращает строку с информацией о семействах животных.
+     */
+    public String getFamily() { // Объявляем публичный метод getFamily, возвращающий String
+        // return - Строка с перечислением семейств.
+        return "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи"; // Возвращаем строку с перечислением семейств
     }
 }
 
