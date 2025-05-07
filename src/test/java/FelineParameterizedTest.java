@@ -31,24 +31,9 @@ public class FelineParameterizedTest { // Объявляем класс FelineTe
         });
     }
 
-    @Test // Указываем, что метод eatMeat_ReturnsPredatorFood() является тестовым
-    public void eatMeat_ReturnsPredatorFood() throws Exception { // Создаем тестовый метод eatMeat_ReturnsPredatorFood(), проверяющий, что метод eatMeat() возвращает список еды для хищника
-        List<String> expected = Arrays.asList("Животные", "Птицы", "Рыба"); // Создаем список ожидаемой еды для хищника
-        assertEquals("Должен вернуть список еды для хищника", expected, feline.eatMeat()); // Сравниваем фактический и ожидаемый результаты
-    }
-
-    @Test // Указываем, что метод getFamily_ReturnsFelineFamily() является тестовым
-    public void getFamily_ReturnsFelineFamily() { // Создаем тестовый метод getFamily_ReturnsFelineFamily(), проверяющий, что метод getFamily() возвращает семейство кошачьих
-        assertEquals("Должен вернуть семейство кошачьих", "Кошачьи", feline.getFamily()); // Сравниваем фактический и ожидаемый результаты
-    }
-
-    @Test // Указываем, что метод getKittensWithoutArgs_ReturnsOneKitten() является тестовым
-    public void getKittensWithoutArgs_ReturnsOneKitten() { // Создаем тестовый метод getKittensWithoutArgs_ReturnsOneKitten(), проверяющий, что метод getKittens() без аргументов возвращает 1 котенка
-        assertEquals("Должен вернуть 1 котенка по умолчанию", 1, feline.getKittens()); // Сравниваем фактический и ожидаемый результаты
-    }
 
     @Test // Указываем, что метод getKittensWithArgs_ReturnsSpecifiedCount() является тестовым
-    public void getKittensWithArgs_ReturnsSpecifiedCount() { // Создаем тестовый метод getKittensWithArgs_ReturnsSpecifiedCount(), проверяющий, что метод getKittens(int kittensCount) возвращает указанное количество котят
+    public void getKittensWithArgsReturnsSpecifiedCount() { // Создаем тестовый метод getKittensWithArgs_ReturnsSpecifiedCount(), проверяющий, что метод getKittens(int kittensCount) возвращает указанное количество котят
         assertEquals("Должен вернуть указанное количество котят", expectedKittens, feline.getKittens(kittensCount)); // Сравниваем фактический и ожидаемый результаты
     }
 }

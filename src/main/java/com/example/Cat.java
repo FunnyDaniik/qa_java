@@ -4,18 +4,18 @@ import java.util.List;
 
 public class Cat {
 
-    private final Predator predator;
+    private final Predator predator; // Приватное поле, которое содержит ссылку на объект, реализующий интерфейс Predator.  `final` означает, что это поле можно инициализировать только один раз (в конструкторе).
 
-    public Cat(Feline feline) {
-        this.predator = feline;
+    public Cat(Feline feline) { // Конструктор класса Cat. Принимает объект Feline в качестве аргумента.
+        this.predator = feline; // Инициализирует поле predator полученным объектом Feline.  Важно: несмотря на то, что параметр называется `feline`, он присваивается полю `predator`.  Это может быть источником путаницы.
     }
 
-    public String getSound() {
-        return "Мяу";
+    public String getSound() { // Метод, который возвращает звук, издаваемый кошкой.
+        return "Мяу"; // Всегда возвращает строку "Мяу".
     }
 
-    public List<String> getFood() throws Exception {
-        return predator.eatMeat();
+    public List<String> getFood() throws Exception { // Метод, который возвращает список еды, которую ест кошка.  Может выбросить исключение.
+        return predator.eatMeat(); // Вызывает метод eatMeat() у объекта, на который ссылается поле predator, и возвращает результат.  Результат ожидается в виде списка строк.  Так как `predator` - это `Feline` (как указано в конструкторе), то `Feline` должен иметь метод `eatMeat()`.
     }
 }
 

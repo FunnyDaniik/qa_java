@@ -5,8 +5,8 @@ import java.util.List;
 
 public class AlexLion extends Lion { // Объявляем класс AlexLion, который наследуется от класса Lion
 
-    public AlexLion(Predator predator) throws Exception { // Создаем конструктор для класса AlexLion, принимающий объект Predator
-        super("Самец", predator); // Вызываем конструктор родительского класса Lion, передавая пол "Самец" и объект Predator.  Алекс - самец, поэтому пол фиксирован.
+    public AlexLion(Feline feline) throws Exception { // Создаем конструктор для класса AlexLion, принимающий объект Predator
+        super("Самец", feline); // Вызываем конструктор родительского класса Lion, передавая пол "Самец" и объект Predator.  Алекс - самец, поэтому пол фиксирован.
     }
 
     public List<String> getFriends() { // Создаем метод getFriends(), возвращающий список друзей Алекса

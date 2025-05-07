@@ -5,31 +5,29 @@ import java.util.List;
 public class Lion { // Объявляем класс Lion
 
     private boolean hasMane; // Объявляем переменную hasMane типа boolean
-    private Predator predator; // Объявляем переменную predator типа Predator
+    private Feline feline; // Объявляем переменную feline типа Feline
 
-<span class="fc" id="L10">    public Lion(String sex, Predator predator) throws Exception { // Объявляем конструктор класса Lion, принимающий String sex и параметр predator типа Predator и выбрасывающий исключение типа Exception</span>
+<span class="fc" id="L10">    public Lion(String sex, Feline feline) throws Exception { // Объявляем конструктор класса Lion, принимающий String sex и параметр feline типа Feline и выбрасывающий исключение типа Exception</span>
 <span class="fc bfc" id="L11" title="All 2 branches covered.">        if (&quot;Самец&quot;.equals(sex)) { // Проверяем, равно ли sex строке &quot;Самец&quot;</span>
 <span class="fc" id="L12">            hasMane = true; // Если равно, присваиваем hasMane значение true</span>
 <span class="fc bfc" id="L13" title="All 2 branches covered.">        } else if (&quot;Самка&quot;.equals(sex)) { // Иначе проверяем, равно ли sex строке &quot;Самка&quot;</span>
 <span class="fc" id="L14">            hasMane = false; // Если равно, присваиваем hasMane значение false</span>
         } else { // Иначе (если sex не равно ни &quot;Самец&quot;, ни &quot;Самка&quot;)
-<span class="fc" id="L16">            throw new Exception(&quot;Используйте допустимые значения пола животного - самей или самка&quot;); // Выбрасываем исключение</span>
+<span class="fc" id="L16">            throw new Exception(&quot;Используйте допустимые значения пола животного - самец или самка&quot;); // Выбрасываем исключение</span>
         }
-<span class="fc" id="L18">        this.predator = predator; // Присваиваем полю predator значение параметра predator</span>
+<span class="fc" id="L18">        this.feline = feline; // Присваиваем полю feline значение параметра feline</span>
 <span class="fc" id="L19">    }</span>
 
-
-
     public int getKittens() { // Объявляем публичный метод getKittens, возвращающий int
-<span class="fc" id="L24">        return predator.getKittens(); // Возвращаем результат вызова метода getKittens() у объекта feline</span>
+<span class="fc" id="L22">        return feline.getKittens(); // Возвращаем результат вызова метода getKittens() у объекта feline</span>
     }
 
     public boolean doesHaveMane() { // Объявляем публичный метод doesHaveMane, возвращающий boolean
-<span class="fc" id="L28">        return hasMane; // Возвращаем значение переменной hasMane</span>
+<span class="fc" id="L26">        return hasMane; // Возвращаем значение переменной hasMane</span>
     }
 
     public List&lt;String&gt; getFood() throws Exception { // Объявляем публичный метод getFood, возвращающий List&lt;String&gt; и выбрасывающий Exception
-<span class="fc" id="L32">        return predator.eatMeat(); // Возвращаем результат вызова метода eatMeat() у объекта feline</span>
+<span class="fc" id="L30">        return feline.eatMeat(); // Возвращаем результат вызова метода eatMeat() у объекта feline</span>
     }
 }
 

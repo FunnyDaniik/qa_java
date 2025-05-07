@@ -4,18 +4,18 @@ import java.util.List;
 
 public class Cat {
 
-    private final Predator predator;
+    private final Predator predator; // Приватное поле, которое содержит ссылку на объект, реализующий интерфейс Predator.  `final` означает, что это поле можно инициализировать только один раз (в конструкторе).
 
-<span class="fc" id="L9">    public Cat(Feline feline) {</span>
-<span class="fc" id="L10">        this.predator = feline;</span>
+<span class="fc" id="L9">    public Cat(Feline feline) { // Конструктор класса Cat. Принимает объект Feline в качестве аргумента.</span>
+<span class="fc" id="L10">        this.predator = feline; // Инициализирует поле predator полученным объектом Feline.  Важно: несмотря на то, что параметр называется `feline`, он присваивается полю `predator`.  Это может быть источником путаницы.</span>
 <span class="fc" id="L11">    }</span>
 
-    public String getSound() {
-<span class="fc" id="L14">        return &quot;Мяу&quot;;</span>
+    public String getSound() { // Метод, который возвращает звук, издаваемый кошкой.
+<span class="fc" id="L14">        return &quot;Мяу&quot;; // Всегда возвращает строку &quot;Мяу&quot;.</span>
     }
 
-    public List&lt;String&gt; getFood() throws Exception {
-<span class="fc" id="L18">        return predator.eatMeat();</span>
+    public List&lt;String&gt; getFood() throws Exception { // Метод, который возвращает список еды, которую ест кошка.  Может выбросить исключение.
+<span class="fc" id="L18">        return predator.eatMeat(); // Вызывает метод eatMeat() у объекта, на который ссылается поле predator, и возвращает результат.  Результат ожидается в виде списка строк.  Так как `predator` - это `Feline` (как указано в конструкторе), то `Feline` должен иметь метод `eatMeat()`.</span>
     }
 }
 
